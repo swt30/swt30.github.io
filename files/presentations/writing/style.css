@@ -1,0 +1,96 @@
+@import url(https://fonts.googleapis.com/css?family=Asul:700);
+@import url(https://fonts.googleapis.com/css?family=Lato:400,400i,900);
+
+/* Fonts and text styles */
+
+body .remark-slide-content {
+  font-family: 'Lato';
+  font-size: 20pt;
+}
+h1, h2, h3 {
+  font-family: 'Asul';
+  font-weight: bold;
+}
+
+.remark-code, .remark-inline-code { font-family: 'monospace'; }
+
+/* Text shading and backgrounds */
+
+.remark-slide-content.stretch-background {
+  background-size: cover !important;
+}
+
+.remark-slide-content.tile-background {
+  background-repeat: repeat;
+}
+
+.shade-light {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+blockquote {
+  text-align: left;
+  border-left-width: 6px;
+  border-left-style: solid;
+  border-left-color: #444;
+  padding: 0 15px;
+  color: #444;
+}
+blockquote > :first-child {
+  margin-top: 0; }
+blockquote > :last-child {
+  margin-bottom: 0; }
+.bad-example blockquote {
+  border-left-color: #CA3236;
+  color: #CA3236;
+}
+.good-example blockquote {
+  border-left-color: #067D26;
+  color: #067D26;
+}
+
+ol {
+  list-style: none;
+}
+
+table {
+  width: 100%;
+}
+th {
+  text-align: center;
+  font-weight: bold;
+  padding-bottom: 0.5em;
+  border-bottom: 1px solid #555;
+}
+td {
+  text-align: center;
+  padding-top: 0.25em;
+  padding-bottom: 0.25em;
+}
+
+.left-column {
+  float: left;
+  width: 45%;
+}
+
+.right-column {
+  float: right;
+  width: 45%;
+}
+
+/* Print style */
+
+@page {
+  size: 1210px 681px;
+  margin: 0;
+}
+
+@media print {
+  .remark-slide-scaler {
+    width: 100% !important;
+    height: 100% !important;
+    transform: scale(1) !important;
+    top: 0 !important;
+    left: 0 !important;
+  }
+}

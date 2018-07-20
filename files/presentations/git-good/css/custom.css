@@ -1,0 +1,113 @@
+/* custom styles can go here */
+
+@import url(https://fonts.googleapis.com/css?family=Special+Elite);
+@import url(https://fonts.googleapis.com/css?family=Neucha);
+@import url(https://fonts.googleapis.com/icon?family=Material+Icons);
+
+.shade-dark {
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+.shade-light {
+    background-color: rgba(255, 255, 255, 0.75);
+}
+
+.reveal .atright {
+    text-align: right;
+    position: relative;
+    right: 0;
+}
+
+.reveal .pad-above {
+    padding-top: 4em;
+}
+
+.reveal .pad-below {
+    padding-bottom: 20em;
+}
+
+.reveal .red {
+    color: red;
+}
+
+.reveal ul {
+    list-style: none;
+    padding-top: 40px;
+}
+
+.reveal ol {
+    list-style: none;
+}
+
+.reveal ul:before, .reveal ul:after {
+    content: " ";
+    display: table;
+}
+
+ul:after {
+    clear: both;
+}
+
+.reveal ul > li {
+    width: 33.3333333%;
+    float: left;
+    text-align: center;
+    padding-bottom: 60px;
+}
+
+.material-icons.ontop {
+    display: block;
+    font-size: 2.5em;
+}
+
+.material-icons.atleft {
+    font-size: 1.1em;
+    padding-right: 5pt;
+}
+
+.reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
+    font-family: "Neucha", sans-serif;
+}
+
+.reveal .big {
+    font-size: 4em;
+}
+
+.reveal .altfont {
+    font-family: "Special Elite", serif;
+    font-weight: normal;
+}
+
+.reveal .notitle {
+    text-transform: none;
+}
+
+.reveal section img {
+    background: white;
+    border: none;
+    box-shadow: 10px 10px #AAA;
+}
+
+.reveal section img.borderless  {
+    background: none;
+    border: none;
+    box-shadow: none;
+}
+
+.reveal img.line-height {
+    height: 1em;
+    vertical-align: bottom;
+}
+
+.reveal pre code {
+    background-color: white;
+}
+
+.reveal code {
+    background: white;
+    font-size: 0.9em;
+}
+
+.reveal img.shorter {
+    max-height: 400px;
+}

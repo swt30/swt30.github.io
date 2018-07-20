@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+         
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Experiences with Julia for astronomy research</title>
+        
+        <style>
+
+    html body {
+        font-family: 'Raleway', sans-serif;
+        background-color: white;
+    }
+
+    :root {
+        --accent: orangered;
+        --border-width:  5px ;
+    }
+
+</style>
+
+
+<link rel="stylesheet" href="https://swt30.github.io/css/main.css">
+
+
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+
+
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+ 
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+ <meta name="generator" content="Hugo 0.54.0" />
+        
+
+        
+    </head>
+
+    
+    
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+    
+
+    <body>
+         
+        <nav class="navbar navbar-default navbar-fixed-top">
+
+            <div class="container">
+
+                <div class="navbar-header">
+
+                    <a class="navbar-brand visible-xs" href="#">Experiences with Julia for astronomy research</a>
+
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                </div>
+
+                <div class="collapse navbar-collapse">
+
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="/">Home</a></li>
+                            
+                                <li><a href="/posts/">Posts</a></li>
+                            
+                                <li><a href="/pages/about">About</a></li>
+                            
+                                <li><a href="/pages/contact">Contact</a></li>
+                            
+                        </ul>
+                    
+
+                    
+                        <ul class="nav navbar-nav navbar-right">
+                            
+                                <li class="navbar-icon"><a href="https://github.com/swt30/"><i class="fa fa-github"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.linkedin.com/in/swt30/"><i class="fa fa-linkedin"></i></a></li>
+                            
+                        </ul>
+                    
+
+                </div>
+
+            </div>
+
+        </nav>
+
+
+<main>
+
+    <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/posts/2015-03-03-julialang-in-astronomy/">Experiences with Julia for astronomy research</a></h4>
+    <h5>March 3, 2015</h5>
+    
+
+</div>
+
+
+    <br> <div class="text-justify">
+
+<p><img src="images/good-julia.png" alt="A happy reinterpretation of the Julia logo" title="Adapted from the Julia logo" /></p>
+
+<p>Last year, I discovered the programming language <a href="http://julialang.org/">Julia</a>. And to my surprise (coming from someone who thought that Python was great and that learning something else would be a waste of time), I&rsquo;ve really enjoyed using it. What&rsquo;s been even cooler, though, is following the development of the language over just the past few months and seeing how much it has improved and how excited everyone is about it. I thought I&rsquo;d write this to add my voice to those who are excited to see where it&rsquo;s going, but this time from the perspective of a student astronomer who has started using it in their research. Below are a few of my experiences with Julia.</p>
+
+<h3 id="it-s-easy-to-write">It&rsquo;s easy to write</h3>
+
+<p>At least in my undergraduate degree, there was little in the way of formal programming training. I suspect this is true for many astronomers. I had a little intro to Matlab, one workshop on statistics in R, and apart from that I ended up teaching myself Python. Python is a fantastic language to learn and I like it a lot, so Julia&rsquo;s similarity to Python was a big draw for me. Julia is easy to write, doesn&rsquo;t have too many &ldquo;gotchas&rdquo;, and the command line interface (REPL) is pretty cool too. I also like the <a href="http://nbviewer.ipython.org/url/jdj.mit.edu/~stevenj/IJulia%20Preview.ipynb">IJulia notebook</a>, which borrows the excellent IPython infrastructure to make something that&rsquo;s great for interactive work and presenting to others.</p>
+
+<h3 id="i-don-t-like-fortran-and-c">I don&rsquo;t like Fortran and C</h3>
+
+<p>I never expected this, but I&rsquo;ve ended up as a theoretical astrophysicist. I don&rsquo;t work much with actual observations (yet). And so much of my work currently involves building models of things. Speed is often important, and the usual approach in astronomy would be to work in Fortran or C.</p>
+
+<p>Fortran and C are great! After all, they&rsquo;ve stuck around for a long time. But I&rsquo;m not quite technically-minded enough to dive into the internals of a chunky piece of low-level code. I&rsquo;ve tried before and it never goes well. As a scientist and not someone who considers themselves a fantastic programmer, I&rsquo;d rather be thinking about what my code is going to <em>do</em> instead of worrying about memory management or how to write things to squeeze out every last drop of performance.</p>
+
+<p>Julia has done two things for me: firstly, it&rsquo;s enabled me to write fast and efficient code without too much hassle. But secondly (and this is pretty useful) it&rsquo;s been very clear about where I <em>do</em> need to care about these things, and what kinds of caring I need to do. The <a href="http://julia.readthedocs.org/en/latest/manual/performance-tips/">Performance Tips</a> section of the manual has cleared up a few things for me. Usually there is a very logical explanation for why something might be slower than expected: for example, because the compiler doesn&rsquo;t know how to store a particular structure efficiently in memory, or because it can&rsquo;t figure out what type something is and must use a more generic version of a particular function. I appreciate that it&rsquo;s made me think a little more about this, while not throwing me in the deep end.</p>
+
+<h3 id="the-type-system-is-really-lovely">The type system is really lovely</h3>
+
+<p>Types are important in Julia, but I like the way I don&rsquo;t have to think about them until I want to. More importantly, though, the type system is the foundation of multiple dispatch, which kind of blew my mind when I realised how well it worked.</p>
+
+<h3 id="multiple-dispatch-eliminates-a-lot-of-the-cognitive-overhead-required-when-doing-things-to-different-data-types">Multiple dispatch eliminates a lot of the cognitive overhead required when doing things to different data types</h3>
+
+<p>Coming from Python, where I had had a brief introduction to object-oriented programming, multiple dispatch seemed a bit weird at first. Isn&rsquo;t it just like making objects but then writing the methods somewhere else? But it&rsquo;s more than that. I think the key thing that makes multiple dispatch really nice to work with is that it encourages you to condense your functions to single concepts. By coming up with a single concept for each thing you want to do, and then writing little variations to handle each data type, I find that I have to think less about actually doing stuff. If I were more naïve, I&rsquo;d be trying to write a million different functions to process particular special cases, and forgetting which one to call. Julia makes this type of thing simple. Want to solve some system of equations you&rsquo;ve come up with? Write a function called <code>solve()</code> and then <code>solve()</code> the system. But now you can write <code>solve()</code> in different ways for different things, and so <code>solve()</code> becomes one super-function that you know you can call the same way. That makes it easier to keep track of things, and that&rsquo;s what I mean by less cognitive overhead.</p>
+
+<p>For example, in my modelling work, I use a number of different equations of state for various materials. Some of these equations of state might be calculated directly from a function, while others might come from a table of values or a numerical inversion. By structuring the types representing these equations appropriately, I can handle them all with exactly the same function and know that it will do the same thing. Then I just write that function multiple times, treating each equation differently. The neat thing about this is how, a couple of times, I&rsquo;ve had to make changes to my code that I thought would be difficult. Instead, it turned out to be a simple matter of adding a new type, choosing an appropriate spot in the hierarchy, and maybe altering a couple of functions to account for the new case or to make them more generic. Then everything else just worked. Cool!</p>
+
+<p>Single-dispatch object-oriented programming is another way to think about this. But this just makes more sense to me for some reason. I think it&rsquo;s because in astronomy (and probably science in general), it makes sense to have many different types or sources of data, which you want to process using similar concepts. That&rsquo;s in opposition to the object-oriented approach, where you have objects that carry their own ways of working.</p>
+
+<h3 id="it-cares-about-interfacing-with-python">It cares about interfacing with Python</h3>
+
+<p>The PyCall package makes using Python code from Julia really easy. At least in astronomy, this is a massive win. Established libraries like Astropy are very useful to have access to. I don&rsquo;t use IDL, another very popular astronomy programming language, so I can&rsquo;t speak to the ease of interaction there, but for my work it&rsquo;s great.</p>
+
+<h3 id="no-one-s-perfect">No-one&rsquo;s perfect</h3>
+
+<p>There&rsquo;s one big disadvantage to using a language that is still in its infancy like this, and that&rsquo;s that everything is still in a state of flux. There are few packages specifically for astronomy and none of them are useful to me anyway. There are some bugs, a couple of oddities, and of course just some features that everyone wants but that aren&rsquo;t here yet. If you want to leave your code untouched for eternity, Julia isn&rsquo;t for you. It will be updated and things will break. The community seem pretty friendly, though. I wish I knew enough to contribute a little bit more, but I&rsquo;d mostly be afraid of mucking stuff up.</p>
+
+<p>I suspect that a lot of what I&rsquo;m discovering to be good about Julia is stuff I would have discovered in any language. But it has some really unique features that I think have let me write some quite nice code for my research. Like I said, I&rsquo;m not an amazing programmer, so anything that makes me feel like I can write more easily is very helpful. Here&rsquo;s to Julia helping me be productive over the remainder of my PhD! That is, if I can stop writing blog posts about the language and actually go and use it for a while.</p>
+
+<h3 id="julia-tutorial">Julia tutorial</h3>
+
+<p>I ran an introductory Julia tutorial for the Institute of Astronomy on March 16th. You can read a summary of the tutorial, and download the files, <a href="https://swt30.github.io/posts/2015-03-16-ioa-julia-tutorials/">here</a>.</p>
+
+<h3 id="more-about-julia">More about Julia</h3>
+
+<p>If you are interested in Julia, the following resources may be helpful.</p>
+
+<ul>
+<li>The Julia <a href="http://julialang.org/">homepage</a>, <a href="http://julialang.org/downloads/">downloads</a>, <a href="http://docs.julialang.org/">manual</a>, and <a href="http://pkg.julialang.org/">packages</a>;</li>
+<li><a href="http://bogumilkaminski.pl/files/julia_express.pdf">Julia Express</a>, a comprehensive cheatsheet by Bogumił Kamiński;</li>
+<li>David Sanders&rsquo; <a href="https://www.youtube.com/watch?v=vWkgEddb4-A">Julia tutorial</a> from SciPy 2014;</li>
+<li>and <a href="http://arstechnica.com/science/2014/05/scientific-computings-future-can-any-coding-language-top-a-1950s-behemoth/">&ldquo;Scientific computing’s future: Can any coding language top a 1950s behemoth?&rdquo;</a> - an Ars Technica article about three challengers to Fortran, of which Julia is one.</li>
+</ul>
+</div>
+
+    
+    
+
+    
+
+    
+
+</main>
+
+        <footer>
+
+            <p class="copyright text-muted">Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a></p>
+
+        </footer>
+       
+    </body>
+
+</html>
+

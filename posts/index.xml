@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Scott Thomas</title>
+    <link>https://swt30.github.io/posts/</link>
+    <description>Recent content in Posts on Scott Thomas</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 20 Jun 2016 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://swt30.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>git good: Intro to source control</title>
+      <link>https://swt30.github.io/posts/2016-06-20-git-good/</link>
+      <pubDate>Mon, 20 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://swt30.github.io/posts/2016-06-20-git-good/</guid>
+      <description>I am holding a short tutorial at .Astronomy 8 on the topic of source (version) control. Here&amp;rsquo;s what you need to get up to speed.
+Setup and presentation files  You will need git on your machine:  Linux users might have it already or can install through their package manager (for example, sudo apt-get install git). Mac users might have it already, might be able to install it automatically by typing git into Terminal, or can get it from http://git-scm.</description>
+    </item>
+    
+    <item>
+      <title>Astrophysics for Supervillains</title>
+      <link>https://swt30.github.io/posts/2016-03-19-astrophysics-for-supervillains/</link>
+      <pubDate>Sat, 19 Mar 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://swt30.github.io/posts/2016-03-19-astrophysics-for-supervillains/</guid>
+      <description>This talk was designed for the IoA Open Day held on March 19 2016. I got to dress up in a menacing cloak, perfect my evil laugh, and teach a class of budding supervillains (a.k.a. the audience) about the darkest, twistiest, most powerful bits of astrophysics—as well as how they could be used for nefarious purposes. The talk was a massive hit, with the entire lecture theatre packed out and people being turned away at the door.</description>
+    </item>
+    
+    <item>
+      <title>The Little Planet That Could</title>
+      <link>https://swt30.github.io/posts/2016-01-20-the-little-planet-that-could/</link>
+      <pubDate>Wed, 20 Jan 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://swt30.github.io/posts/2016-01-20-the-little-planet-that-could/</guid>
+      <description>I gave a Wednesday evening public talk in January with the title of &amp;ldquo;Earth: The Little Planet That Could&amp;rdquo;. The talk was in the form of a children&amp;rsquo;s picture book about a little planet called E, and followed its journey as it grew up into the lovely lush watery planet that we call home. Then we got to hear about all of the things that went wrong in other systems: planets that never formed, planets that were destroyed, planets that were unsuitable for life.</description>
+    </item>
+    
+    <item>
+      <title>Beyond Pluto</title>
+      <link>https://swt30.github.io/posts/2015-08-31-beyond-pluto/</link>
+      <pubDate>Mon, 31 Aug 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://swt30.github.io/posts/2015-08-31-beyond-pluto/</guid>
+      <description>I was one of the guests on a special episode of The Naked Scientists dedicated to Pluto, everyone&amp;rsquo;s favourite dwarf planet. In my section of the podcast I showed host Graihagh Jackson the historic Northumberland Telescope at the Institute of Astronomy. It&amp;rsquo;s a fun little telescope—well, not really &amp;ldquo;little&amp;rdquo;!—that has the great claim to fame of being used to nearly discover Neptune when John Couch Adams was an undergraduate here. As it&amp;rsquo;s a refracting telescope, it has a honking great lens in it, so it is quite imposing and a lot of fun to show to people who visit the Institute.</description>
+    </item>
+    
+    <item>
+      <title>Mathematics in Astronomy</title>
+      <link>https://swt30.github.io/posts/2015-04-08-maths-in-astronomy/</link>
+      <pubDate>Wed, 08 Apr 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://swt30.github.io/posts/2015-04-08-maths-in-astronomy/</guid>
+      <description>I gave a talk for the STEP Easter School, a summer programme for students from non-selective state schools who have been given offers to read mathematics at Cambridge. Although I never had the experience of applying to Cambridge as an undergrad, I can imagine that it would have been slightly terrifying! It was nice to get to talk to students who were in a similar position as I was, where their schools don&amp;rsquo;t necessarily have a lot of funding to throw at helping them through examinations.</description>
+    </item>
+    
+    <item>
+      <title>Introduction to Julia tutorials at the IoA</title>
+      <link>https://swt30.github.io/posts/2015-03-16-ioa-julia-tutorials/</link>
+      <pubDate>Mon, 16 Mar 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://swt30.github.io/posts/2015-03-16-ioa-julia-tutorials/</guid>
+      <description>I ran an introduction to Julia for students and staff at the IoA. This consisted of a ~20 minute introductory talk, followed by an extended tutorial. The talk covers the following:
+ What is Julia? How can you use it at the IoA? What is it good for? What is it not so good for?  The tutorial covers how to use Julia, especially the syntax differences that are likely to trip up astronomers coming from Matlab, Python, or IDL.</description>
+    </item>
+    
+    <item>
+      <title>Experiences with Julia for astronomy research</title>
+      <link>https://swt30.github.io/posts/2015-03-03-julialang-in-astronomy/</link>
+      <pubDate>Tue, 03 Mar 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://swt30.github.io/posts/2015-03-03-julialang-in-astronomy/</guid>
+      <description>Last year, I discovered the programming language Julia. And to my surprise (coming from someone who thought that Python was great and that learning something else would be a waste of time), I&amp;rsquo;ve really enjoyed using it. What&amp;rsquo;s been even cooler, though, is following the development of the language over just the past few months and seeing how much it has improved and how excited everyone is about it. I thought I&amp;rsquo;d write this to add my voice to those who are excited to see where it&amp;rsquo;s going, but this time from the perspective of a student astronomer who has started using it in their research.</description>
+    </item>
+    
+    <item>
+      <title>Student/postdoc skills jamboree</title>
+      <link>https://swt30.github.io/posts/2014-09-18-skills-jamboree/</link>
+      <pubDate>Thu, 18 Sep 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://swt30.github.io/posts/2014-09-18-skills-jamboree/</guid>
+      <description>Held in September 2014, this was a &amp;ldquo;skills exchange&amp;rdquo; that mirrored one held earlier in the year, where the postdocs presented their work. This time it was the students&amp;rsquo; turn to talk about what they did at the IoA, what problems they worked on, and what skills they had to offer (or wanted to improve). Sadly, problems with the department&amp;rsquo;s credit card prevented us ordering a lot of pizzas like we had planned, but it was still a great opportunity to eat, drink, and learn about what others in the department do.</description>
+    </item>
+    
+    <item>
+      <title>&#34;Supermoon&#34; on the BBC</title>
+      <link>https://swt30.github.io/posts/2014-08-08-supermoon/</link>
+      <pubDate>Fri, 08 Aug 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://swt30.github.io/posts/2014-08-08-supermoon/</guid>
+      <description>On Friday 8 August, I spoke briefly on BBC Radio Cambridgeshire just before 6pm about the &amp;ldquo;supermoon&amp;rdquo; visible this weekend. Unfortunately, my visit coincided with the most torrential downpour of rain I&amp;rsquo;ve seen since my arrival in the UK! So, with the streets flooded with water and cars backed up all the way down Chesterton Road, I strapped on my helmet and raincoat and cycled out to the BBC studio, only to find the running order in shambles as the hosts tried to deal with both floods of water and floods of calls.</description>
+    </item>
+    
+    <item>
+      <title>The Gemini Planet Imager</title>
+      <link>https://swt30.github.io/posts/2014-05-09-gemini-planet-imager/</link>
+      <pubDate>Fri, 09 May 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://swt30.github.io/posts/2014-05-09-gemini-planet-imager/</guid>
+      <description>I recently did another interview for the Naked Scientists about a press release that caught their eye: the Gemini Planet Imager&amp;rsquo;s first light. Gemini Planet Imager, or GPI, is an instrument for direct imaging of exoplanets that is billed as &amp;ldquo;the world&amp;rsquo;s most powerful exoplanet camera.&amp;rdquo; The telescope itself is on a mountain at about 9000 ft in the Chilean Andes, and the instrument has hit the news recently due to some of the first images that have been released from it.</description>
+    </item>
+    
+    <item>
+      <title>A new dwarf planet?</title>
+      <link>https://swt30.github.io/posts/2014-03-30-new-dwarf-planet/</link>
+      <pubDate>Sun, 30 Mar 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://swt30.github.io/posts/2014-03-30-new-dwarf-planet/</guid>
+      <description>At the end of March, I was interviewed on a local radio show called the Naked Scientists about the recent discovery of a dwarf planet candidate, 2012 VP113. Below are some notes I made about it beforehand.
+The discovery The paper announces the discovery of a new solar system object, which has the rather un-exciting name of 2012 VP113, although I&amp;rsquo;m told the team that discovered it refers to it as Joe Biden (the &amp;ldquo;VP&amp;rdquo;).</description>
+    </item>
+    
+  </channel>
+</rss>

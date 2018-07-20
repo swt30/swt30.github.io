@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Files on Scott Thomas</title>
+    <link>https://swt30.github.io/files/</link>
+    <description>Recent content in Files on Scott Thomas</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="https://swt30.github.io/files/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title></title>
+      <link>https://swt30.github.io/files/presentations/git-good/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://swt30.github.io/files/presentations/git-good/</guid>
+      <description>git good  var link = document.createElement( &#39;link&#39; ); link.rel = &#39;stylesheet&#39;; link.type = &#39;text/css&#39;; link.href = window.location.search.match( /print-pdf/gi ) ? &#39;css/print/pdf.css&#39; : &#39;css/print/paper.css&#39;; document.getElementsByTagName( &#39;head&#39; )[0].appendChild( link );    git good. an intro to source controlHowdy folks! There are times in life when the chips are down and the code is a mess. At times like these, there’s only one thing to do. Partner, you better git good.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://swt30.github.io/files/presentations/letchworth-talk/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://swt30.github.io/files/presentations/letchworth-talk/</guid>
+      <description>Exoplanets: is there another Earth?  var link = document.createElement( &#39;link&#39; ); link.rel = &#39;stylesheet&#39;; link.type = &#39;text/css&#39;; link.href = window.location.search.match( /print-pdf/gi ) ? &#39;css/print/pdf.css&#39; : &#39;css/print/paper.css&#39;; document.getElementsByTagName( &#39;head&#39; )[0].appendChild( link );    ExoplanetsIs there another Earth?Scott Thomas
+University of Cambridge
+Intro:
+ IoA NZ undergraduate My background - how I got here what interested me in astro educational trajectory     The Little Planet That Could   Why do we care?</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://swt30.github.io/files/presentations/supervillains/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://swt30.github.io/files/presentations/supervillains/</guid>
+      <description>Prez  var link = document.createElement( &#39;link&#39; ); link.rel = &#39;stylesheet&#39;; link.type = &#39;text/css&#39;; link.href = window.location.search.match( /print-pdf/gi ) ? &#39;css/print/pdf.css&#39; : &#39;css/print/paper.css&#39;; document.getElementsByTagName( &#39;head&#39; )[0].appendChild( link );     Astrophysics for Supervillains    
+Your instructor approaches!
+Tyrant of a Thousand Suns
+Subjugator of Solar Systems
+and Mastermind Extraordinaire
+A name that inspires fear across the galaxy…
+SCOTT THOMAS[evil laugh, cut the music]
+  Your instructor approaches!</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://swt30.github.io/files/presentations/the-little-planet-that-could/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://swt30.github.io/files/presentations/the-little-planet-that-could/</guid>
+      <description>Prez  var link = document.createElement( &#39;link&#39; ); link.rel = &#39;stylesheet&#39;; link.type = &#39;text/css&#39;; link.href = window.location.search.match( /print-pdf/gi ) ? &#39;css/print/pdf.css&#39; : &#39;css/print/paper.css&#39;; document.getElementsByTagName( &#39;head&#39; )[0].appendChild( link );     I&amp;#39;m Scott, and I wanted to start by saying a little bit about being an astronomer.
+Astronomy is a great field to study and work in.
+ Most days I get to do interesting things, and the days when I don&amp;#39;t are few and far between.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://swt30.github.io/files/presentations/writing/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://swt30.github.io/files/presentations/writing/</guid>
+      <description>  Writing workshop     var slideshow = remark.create({ sourceUrl: &#39;writing.md&#39;, ratio: &#39;16:9&#39;, countIncrementalSlides: false });    </description>
+    </item>
+    
+  </channel>
+</rss>

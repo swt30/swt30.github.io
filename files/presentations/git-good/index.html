@@ -1,0 +1,536 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+
+    <title>git good</title>
+
+    <meta name="description" content="-- DESCRIPTION HERE --">
+    <meta name="author" content="sthomas">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/white.css" id="theme">
+
+    
+    <link rel="stylesheet" href="css/highlight/styles/nonexistent.css" id="highlight-theme">
+
+    
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+
+    <link rel="stylesheet" href="js/dynamic-theme.js"><link rel="stylesheet" href="js/such-notes-print.js"><link rel="stylesheet" href="css/custom.css">
+
+  </head>
+
+  <body>
+
+    <div class="reveal">
+      <div class="slides"><section id="" class="slide" data-background="images/green.png" data-background-repeat="repeat" data-background-size="auto" data-has-notes="true">
+<h1 class="notitle big">git good.</h1>
+<h3 class="notitle altfont">an intro to source control</h3><aside class="notes"><p>Howdy folks!
+There are times in life when the chips are down and the code is a mess.
+At times like these, there’s only one thing to do.
+Partner, you better git good.</p>
+<p>Welcome!</p>
+<p>35-40 minutes to blaze through an intro to git.
+We’re not going to have time for you to fully grasp how it works but we are going to have time to convince you of its usefulness and get you started on learning how to use it.</p></aside>
+</section>
+
+<section id="" class="slide" data-background="images/green.png" data-background-repeat="repeat" data-background-size="auto" data-has-notes="true">
+<h2 class="atright notitle pad-above">Scott Thomas</h2>
+<h4 class="atright notitle altfont">Institute of Astronomy, University of Cambridge</h4>
+<p class="atright fragment"><img src="images/twitter.png" alt=""><br>
+<a href="http://www.twitter.com/pokegourmet">@pokegourmet</a></p>
+<p class="atright fragment">Get the files: <a href="http://www.ast.rono.me/git-good.html">ast.rono.me/git-good</a></p><aside class="notes"><p>This is me - PhD student, becoming a data scientist next year.</p>
+<p>I feel a bit left out not having a personal twitter account. The only Twitter account I have is a twitter bot I wrote that tweets pokemon/food name mashups. It finished the first 150 in April and has been silent since then but I might start drawing them at some point in the future. So here it is in case you wanted to go and follow it.</p></aside>
+</section>
+
+<section id="" class="slide" data-background="images/data-yawns.gif" data-has-notes="true">
+<h2 class="shade-light">For some of you this tutorial may be…</h2><aside class="notes"><p>If you know about source control already, there’s not going to be much new here. We’re probably not even going to have time to cover branching, merging, or pull requests, for example.</p></aside>
+</section>
+
+<section id="" class="slide" data-background="images/carl-sagan-looks-dazzled.gif" data-has-notes="true">
+<h2 class="shade-light">But I hope that for the rest it is…</h2><aside class="notes"><p>But if you’ve never used source control before, I am about to BLOW YOUR MIND.</p></aside>
+</section>
+
+<section id="" class="slide" data-background="images/green.png" data-background-repeat="repeat" data-background-size="auto" data-has-notes="true">
+<h1>Outline</h1>
+<ul>
+<li class="fragment" data-fragment-index="1"><i class="material-icons ontop">announcement</i> Why <strong>source control</strong>?</li>
+<li class="fragment" data-fragment-index="2"><i class="material-icons ontop">fast_forward</i> Get going with <strong>git</strong></li>
+<li class="fragment" data-fragment-index="3"><i class="material-icons ontop">face</i> Git for <strong>you</strong></li>
+<li class="fragment" data-fragment-index="4"><i class="material-icons ontop">group</i> Git for <strong>collaboration</strong></li>
+<li class="fragment" data-fragment-index="5"><i class="material-icons ontop">computer</i> Sample <strong>exercises</strong></li>
+<li class="fragment" data-fragment-index="5"><i class="material-icons ontop">live_help</i> Common <strong>questions</strong></li>
+</ul><aside class="notes"><ul>
+<li>Why source control: motivation</li>
+<li>Get going: the basics you need to know</li>
+<li>Git for you: the bits you really care about</li>
+<li>Git for collaboration: working with others</li>
+<li>Exercises and Common questions: stuff to try out and FAQ</li>
+</ul></aside>
+</section>
+
+<section id="" class="slide" data-background="images/purple.png" data-background-repeat="repeat" data-background-size="auto" data-transition="zoom" data-has-notes="true">
+<h1><i class="material-icons ontop">announcement</i></h1>
+<h1>Why source control?</h1>
+<p class="fragment"><i class="material-icons atleft">live_help</i> <em>&quot;Uh, what is source control?&quot;</em></p><aside class="notes"><p>Also known as version control, source control really just means keeping structured backups of your work.</p>
+<ul>
+<li>Dropbox</li>
+<li>Time Machine or manual backups</li>
+<li>Wikis</li>
+</ul>
+<p>But there’s a lot more to it than just keeping backups, as we’ll get to soon.
+First - why do you need it?</p></aside>
+</section>
+
+<section id="" class="slide" data-background="images/purple.png" data-background-repeat="repeat" data-background-size="auto" data-has-notes="false">
+<h2>You need</h2>
+<h1>source control</h1>
+<h2>because…</h2>
+</section>
+
+<section id="" class="slide" data-background="images/purple.png" data-background-repeat="repeat" data-background-size="auto" data-has-notes="true">
+<h2>You suck at handling versions</h2>
+<p><img src="images/versions.png" alt=""></p><aside class="notes"><p>You suck at handling versions.
+You really do.
+You have no idea what you’re doing.
+Look at this mess.</p>
+<p>(maybe tell Tall Harry’s story)</p></aside>
+</section>
+
+<section id="" class="slide" data-background="images/purple.png" data-background-repeat="repeat" data-background-size="auto" data-has-notes="true">
+<h2>You make mistakes</h2>
+<p><img src="images/delete-your-thesis.png" alt="" class="borderless"></p><aside class="notes"><p>Even if you are perfect, you work with others…</p></aside>
+</section>
+
+<section id="" class="slide" data-background="images/ron-throws-his-computer.gif" data-has-notes="false">
+<h2 class="shade-light">You work with others <em class="notitle">and those people suck at versions and make mistakes too</em></h2>
+</section>
+
+<section id="" class="slide" data-background="images/purple.png" data-background-repeat="repeat" data-background-size="auto" data-transition="slide-in fade-out" data-has-notes="true">
+<h2>You’ve probably done this:</h2>
+<pre><code class="language-python"><span class="hljs-keyword">import</span> stuff
+<span class="hljs-keyword">import</span> things
+<span class="hljs-keyword">import</span> irrelevant_thing
+
+some_nice_code()
+some_more_nice_code()
+old_code()
+crap_code()
+this_never_worked_anyway()
+
+
+</code></pre><aside class="notes"><p>You have some nice code and then for whatever reason you need to change it, but not permanently.
+Perhaps you need to re-run just part of the analysis.
+Perhaps you are trying something new.
+Or maybe instead you’re writing a document but you don’t want to delete your scribblings.
+What do you do? You comment it out!</p></aside>
+</section>
+
+<section id="" class="slide" data-background="images/purple.png" data-background-repeat="repeat" data-background-size="auto" data-transition="fade-in slide-out" data-has-notes="true">
+<h2>You’ve probably done this:</h2>
+<pre><code class="language-python"><span class="hljs-keyword">import</span> stuff
+<span class="hljs-keyword">import</span> things
+<span class="hljs-comment"># import irrelevant_thing  # no longer necessary</span>
+
+some_nice_code()
+some_more_nice_code()
+<span class="hljs-comment"># old_code()</span>
+<span class="hljs-comment"># crap_code()</span>
+<span class="hljs-comment"># this_never_worked_anyway()</span>
+
+<span class="hljs-comment"># OLD CODE KEPT AROUND "JUST IN CASE"</span>
+</code></pre><aside class="notes"><p>There must be an easier solution!</p></aside>
+</section>
+
+<section id="" class="slide" data-background="images/job-interview.jpg" data-has-notes="false">
+<h2 class="pad-below">You want a job</h2>
+</section>
+
+<section id="" class="slide" data-background="images/purple.png" data-background-repeat="repeat" data-background-size="auto" data-has-notes="false">
+<h2>Source control is the answer</h2>
+<ul>
+<li class="fragment"><i class="material-icons ontop">cached</i>Go back to previous versions</li>
+<li class="fragment"><i class="material-icons ontop">backup</i>Back up and share your data easily</li>
+<li class="fragment"><i class="material-icons ontop">folder_shared</i>Work collaboratively on code or documents</li>
+</ul>
+<p>… and the tools to use it are <strong>free</strong> and <strong>powerful</strong>.</p>
+</section>
+
+<section id="" class="slide" data-background="images/blue.png" data-background-repeat="repeat" data-background-size="auto" data-transition="zoom" data-has-notes="true">
+<h1><i class="material-icons ontop">fast_forward</i></h1>
+<h1>Get going with <img src="images/git-logo.png" alt="" class="borderless line-height"></h1><aside class="notes"><p>We’re going to focus on command line git today, but there are a number of graphical tools available too.</p></aside>
+</section>
+
+<section id="" class="slide" data-background="images/blue.png" data-background-repeat="repeat" data-background-size="auto" data-has-notes="true">
+<h2>How does <img src="images/git-logo.png" alt="" class="borderless line-height"> work?</h2>
+<ul>
+<li class="fragment"><img src="images/hidden-folder.png" alt=""><br>Git maintains a hidden folder in your project</li>
+<li class="fragment"><img src="images/commit-files.png" alt=""><br>You <strong>commit</strong> snapshots of changes to this folder</li>
+<li class="fragment"><img src="images/commit-history.png" alt=""><br>Git keeps track of everything</li>
+</ul>
+<p class="fragment"><i class="material-icons atleft">live_help</i> <em>&quot;Why is this better than just backing up?&quot;</em></p><aside class="notes"><p>It’s better because of MANY REASONS:</p>
+<ul>
+<li>It’s designed for text: you can see exactly what changed</li>
+<li>It’s designed for collaboration and will let you share code and documents more easily</li>
+<li>It’s distributed: there’s no one “central” version</li>
+<li>You get the provenance of each change</li>
+<li>You have every snapshot, which is hugely useful for figuring out when something broke</li>
+<li>And you can use it as a backup system anyway</li>
+</ul></aside>
+</section>
+
+<section id="" class="slide" data-background="images/blue.png" data-background-repeat="repeat" data-background-size="auto" data-has-notes="false">
+<h2>Setting up <img src="images/git-logo.png" alt="" class="borderless line-height"></h2>
+<ol>
+<li>
+<p><strong>Linux:</strong> get git via your package manager; for example, <code>sudo apt-get install git</code></p>
+</li>
+<li>
+<p><strong>OSX:</strong> may install automatically if you run <code>git</code> in the terminal, or go to <a href="http://git-scm.org/download/mac">git-scm.org/download/mac</a></p>
+</li>
+<li>
+<p><strong>Windows:</strong> get a better console from <a href="http://cmder.net">cmder.net</a> or try <a href="http://git-for-windows.github.io">git-for-windows.github.io</a></p>
+</li>
+</ol>
+<p>Then identify yourself:</p>
+<pre><code>$ git config --global user<span class="hljs-selector-class">.name</span> <span class="hljs-string">"Scott Thomas"</span>
+$ git config --global user<span class="hljs-selector-class">.email</span> <span class="hljs-string">"swt30@ast.cam.ac.uk"</span>
+</code></pre>
+</section>
+
+<section id="" class="slide" data-background="images/blue.png" data-background-repeat="repeat" data-background-size="auto" data-has-notes="true">
+<h2>Set up a repository</h2>
+<pre><code>$ git init
+
+Initialized empty Git repository in <span class="hljs-regexp">/home/</span>sthomas<span class="hljs-regexp">/Documents/my</span>-<span class="hljs-keyword">project</span><span class="hljs-regexp">/.git/</span>
+</code></pre>
+<p><img src="images/the-dot-git-folder.png" alt=""></p><aside class="notes"><p>Make an empty directory and do <code>git init</code>.</p>
+<p>A <em>repository</em> tracks the files in your project and any changes to them. It doesn’t matter what’s inside it - just know that this folder holds the key to your dreams.</p></aside>
+</section>
+
+<section id="" class="slide" data-background="images/blue.png" data-background-repeat="repeat" data-background-size="auto" data-has-notes="false">
+<h2>Show some commitment</h2>
+<p>Open up your favourite text editor and save a few lines of text into a README document (say, “README.md”). Then:</p>
+<pre><code>$ git add README<span class="hljs-selector-class">.md</span>
+</code></pre>
+<pre><code>$ git <span class="hljs-keyword">commit</span>
+
+[<span class="hljs-keyword">master</span> (root-<span class="hljs-keyword">commit</span>) <span class="hljs-number">52</span>b46ae] <span class="hljs-keyword">Add</span> README
+ <span class="hljs-number">1</span> <span class="hljs-keyword">file</span> <span class="hljs-keyword">changed</span>, <span class="hljs-number">2</span> insertions(+)
+ <span class="hljs-keyword">create</span> <span class="hljs-keyword">mode</span> <span class="hljs-number">100644</span> README.md
+</code></pre>
+<p><em>you may need to tell git which editor to use:</em></p>
+<pre><code>$ git config --<span class="hljs-keyword">global</span> core.<span class="hljs-keyword">editor</span>= ...
+</code></pre>
+</section>
+
+<section id="" class="slide" data-background="images/blue.png" data-background-repeat="repeat" data-background-size="auto" data-has-notes="true">
+<h2>What just happened?</h2>
+<pre><code>$ git log
+
+<span class="hljs-keyword">commit</span> a04cbdc1ab5943837eb2c1a6f80c3e725a45be6d
+Author: Scott Thomas &lt;swt30@ast.cam.ac.uk&gt;
+<span class="hljs-built_in">Date</span>:   Mon Jun <span class="hljs-number">6</span> <span class="hljs-number">17</span>:<span class="hljs-number">51</span>:<span class="hljs-number">21</span> <span class="hljs-number">2016</span> +<span class="hljs-number">0100</span>
+
+    <span class="hljs-keyword">Initial</span> <span class="hljs-keyword">commit</span> <span class="hljs-keyword">with</span> README
+</code></pre>
+<pre><code>$ git status
+
+On branch <span class="hljs-keyword">master</span>
+<span class="hljs-title">nothing</span> to commit, working directory clean
+</code></pre><aside class="notes"><p>The log shows the commit</p>
+<ul>
+<li>it gets a specific identifier called a hash</li>
+<li>it has all the details</li>
+<li>if you ever publish the repository, this is all public info</li>
+</ul>
+<p>The status shows the current state of the directory</p>
+<ul>
+<li>at the moment it’s clean - git knows of no more changes</li>
+</ul></aside>
+</section>
+
+<section id="" class="slide" data-background="images/blue.png" data-background-repeat="repeat" data-background-size="auto" data-has-notes="true">
+<h2>The two-step commit process</h2>
+<ul>
+<li><strong>0. Edit</strong><br>
+Make changes as normal…</li>
+<li><strong>1. Stage</strong><br>
+Mark any changes that you want to include…</li>
+<li><strong>2. Commit</strong><br>
+Lock it in!</li>
+</ul>
+<p><code>git status</code> will show you what’s been added and what’s waiting.</p>
+<br>
+<ol>
+<li><i class="material-icons atleft">computer</i> Change or add to the text in README, <code>git add</code> it, then change the text again and check <code>git status</code>. What happened? Commit those changes too.</li>
+</ol><aside class="notes"><p>We had to <strong>stage (add)</strong> the changes and then <strong>commit</strong> everything.</p>
+<p>This process means that:</p>
+<ol>
+<li>You can commit just a bit at a time, even if you’ve changed lots of things</li>
+<li>You can review what you’ve done before you commit (handy)</li>
+</ol>
+<p>After the exercise, it should show as modified again. If you committed now, your most recent changes won’t be added. The best way to think about this is that <code>git add</code> adds <em>changes</em>, not <em>files</em>.</p></aside>
+</section>
+
+<section id="" class="slide" data-background="images/blue.png" data-background-repeat="repeat" data-background-size="auto" data-has-notes="true">
+<h2>The three key commands</h2>
+<ol>
+<li>
+<p><code>git status</code>: Check which files have been changed</p>
+</li>
+<li>
+<p><code>git add &lt;files or folders&gt;</code>: Stage the changes</p>
+</li>
+<li>
+<p><code>git commit</code>: Lock it in</p>
+</li>
+</ol>
+<p class="fragment"><i class="material-icons atleft">live_help</i> <em>&quot;What happens once I’ve committed?&quot;</em></p>
+<p class="fragment"><i class="material-icons atleft">live_help</i> <em>&quot;What if I made a mistake when committing?&quot;</em></p><aside class="notes"><p>Anything committed is “safe” (in quote marks).</p>
+<p>The three key commands you learned will let you happily go off and commit everything. But these are only ways to get the files <em>into</em> your repository…</p></aside>
+</section>
+
+<section id="" class="slide" data-background="images/grey.png" data-background-repeat="repeat" data-background-size="auto" data-transition="zoom" data-has-notes="true">
+<h1><i class="material-icons ontop">face</i></h1>
+<h1>Git for you</h1><aside class="notes"><p>So in this section, “Git for You”, we’ll look at the most useful features that Git provides the lone astronomer.</p></aside>
+</section>
+
+<section id="" class="slide" data-background="images/grey.png" data-background-repeat="repeat" data-background-size="auto" data-has-notes="true">
+<h2>Useful tools for the lone astronomer</h2>
+<ul>
+<li><code>git checkout</code><br>lets you move between commits</li>
+<li><code>git tag</code><br>marks a commit for later reference</li>
+<li><code>git reset</code><br>is your “undo” button</li>
+</ul><aside class="notes"><p>Specifically, these features are: tagging interesting points; reverting to earlier versions of your code; and backing up online.</p></aside>
+</section>
+
+<section id="" class="slide" data-background="images/grey.png" data-background-repeat="repeat" data-background-size="auto" data-has-notes="true">
+<h2>Use <code class="notitle">git checkout</code> to move between commits</h2>
+<pre><code>$ git log
+
+<span class="hljs-keyword">commit</span> ffa75e3a59654373383ec6554de8a8d58df29092
+Author: Scott Thomas &lt;swt30@ast.cam.ac.uk&gt;
+<span class="hljs-built_in">Date</span>:   Mon Jun <span class="hljs-number">6</span> <span class="hljs-number">20</span>:<span class="hljs-number">17</span>:<span class="hljs-number">35</span> <span class="hljs-number">2016</span> +<span class="hljs-number">0100</span>
+
+    <span class="hljs-keyword">Add</span> author <span class="hljs-keyword">to</span> README
+
+ README.md | <span class="hljs-number">2</span> ++
+ <span class="hljs-number">1</span> <span class="hljs-keyword">file</span> <span class="hljs-keyword">changed</span>, <span class="hljs-number">2</span> insertions(+)
+
+<span class="hljs-keyword">commit</span> <span class="hljs-number">52</span>b46aeec2fb86d32e6d8925358997e289140bd8
+Author: Scott Thomas &lt;swt30@ast.cam.ac.uk&gt;
+<span class="hljs-built_in">Date</span>:   Mon Jun <span class="hljs-number">6</span> <span class="hljs-number">18</span>:<span class="hljs-number">30</span>:<span class="hljs-number">41</span> <span class="hljs-number">2016</span> +<span class="hljs-number">0100</span>
+
+    <span class="hljs-keyword">Add</span> README
+
+ README.md | <span class="hljs-number">2</span> ++
+ <span class="hljs-number">1</span> <span class="hljs-keyword">file</span> <span class="hljs-keyword">changed</span>, <span class="hljs-number">2</span> insertions(+)
+</code></pre><aside class="notes"><p>Here’s an example. I use <code>git log</code> to get the ID of the commit I need… I copy it [the lower one]… And I move back to that commit.</p></aside>
+</section>
+
+<section id="" class="slide" data-background="images/grey.png" data-background-repeat="repeat" data-background-size="auto" data-has-notes="true">
+<pre><code>$ git checkout <span class="hljs-number">52</span>b46aee
+
+  Note: checking out <span class="hljs-string">'52b46aee'</span>.
+
+You are <span class="hljs-keyword">in</span> <span class="hljs-string">'detached HEAD'</span> state. You can look around, make experimental
+changes <span class="hljs-keyword">and</span> commit them, <span class="hljs-keyword">and</span> you can discard <span class="hljs-keyword">any</span> commits you make <span class="hljs-keyword">in</span> this
+state <span class="hljs-keyword">without</span> impacting <span class="hljs-keyword">any</span> branches <span class="hljs-keyword">by</span> performing another checkout.
+
+If you want <span class="hljs-built_in">to</span> <span class="hljs-built_in">create</span> <span class="hljs-keyword">a</span> <span class="hljs-built_in">new</span> branch <span class="hljs-built_in">to</span> retain commits you <span class="hljs-built_in">create</span>, you may
+<span class="hljs-built_in">do</span> so (now <span class="hljs-keyword">or</span> later) <span class="hljs-keyword">by</span> <span class="hljs-keyword">using</span> -b <span class="hljs-keyword">with</span> <span class="hljs-keyword">the</span> checkout <span class="hljs-keyword">command</span> <span class="hljs-title">again</span>. <span class="hljs-title">Example</span>:
+
+  git checkout -b &lt;<span class="hljs-built_in">new</span>-branch-name&gt;
+
+HEAD is now <span class="hljs-keyword">at</span> <span class="hljs-number">52</span>b46ae... Add README
+</code></pre>
+<ol>
+<li><i class="material-icons atleft">computer</i> <code>git checkout</code> your first commit and look at the README. Use <code>git checkout master</code> to return to where you started.</li>
+</ol><aside class="notes"><p>What’s the use scenario here?</p>
+<ul>
+<li>See if something worked with an earlier version of your analysis code</li>
+<li>You made a stupid commit and you want to go back</li>
+<li><code>git checkout</code> also lets you reset files to an earlier version</li>
+</ul>
+<p>It’s impossible to lose your work when you do a checkout and go back to an old version. Git will warn you if you need to commit files first.</p></aside>
+</section>
+
+<section id="" class="slide" data-background="images/grey.png" data-background-repeat="repeat" data-background-size="auto" data-has-notes="true">
+<h2>Tagging interesting commits</h2>
+<pre><code><span class="hljs-variable">$ </span>git tag original-plots-<span class="hljs-keyword">for</span>-paper
+<span class="hljs-variable">$ </span>git checkout original-plots-<span class="hljs-keyword">for</span>-paper
+</code></pre>
+<p>Use <code>git tag</code> to give a label to a particular commit and more easily revisit it later. (I use this to tag submitted versions of plots or papers, for example).</p><aside class="notes"><p>Now I can refer to that commit using a more intuitive name. Tags are useful but, if you’re going to forget one thing you learned today, forget this, because they’re entirely optional.</p></aside>
+</section>
+
+<section id="" class="slide" data-background="images/grey.png" data-background-repeat="repeat" data-background-size="auto" data-has-notes="true">
+<h2>Undoing your screw-ups</h2>
+<ol>
+<li>
+<p><code>git reset -- &lt;file&gt;</code> unstages a file once you’ve <code>git add</code>ed it</p>
+</li>
+<li>
+<p><code class="fragment highlight-red" data-fragment-index="1">git reset --hard</code> discards all unstaged changes and reverts to the last commit.</p>
+</li>
+<li>
+<p><code class="fragment highlight-red" data-fragment-index="1">git checkout &lt;file&gt;</code> is another way of achieving the same thing.</p>
+</li>
+</ol>
+<h3><strong class="fragment red" data-fragment-index="1">(DANGER)</strong></h3>
+<ol start="3">
+<li>
+<p><i class="material-icons atleft">computer</i> Make a new file and stage it. Decide you don’t actually want it after it. Use <code>git reset</code> to unstage it. Delete it.</p>
+</li>
+<li>
+<p><i class="material-icons atleft">computer</i> Delete your README. Then bring it back from the dead by restoring to the last commit.</p>
+</li>
+</ol><aside class="notes"><p>The reason I say “danger!” is because this command will discard any unstaged changes. Remember kids, if you want to keep it, commit it!</p>
+<p>There’s usually a million different ways to do things in git.</p>
+<p>These three commands will let you move back and forward through time itself - pretty cool, huh? In the final section, we’ll look at working online and collaborating with others.</p></aside>
+</section>
+
+<section id="" class="slide" data-background="images/yellow.png" data-background-repeat="repeat" data-background-size="auto" data-transition="zoom" data-has-notes="false">
+<h1><i class="material-icons ontop">group</i></h1>
+<h1>Git for collaboration</h1>
+</section>
+
+<section id="" class="slide" data-background="images/yellow.png" data-background-repeat="repeat" data-background-size="auto" data-has-notes="true">
+<h2>Put it all online: introducing <img src="images/github-logo.png" alt="" class="borderless line-height"></h2>
+<p>a.k.a. free backups: <a href="http://www.github.com">www.github.com</a></p>
+<p><img src="images/github-home.png" alt=""></p><aside class="notes"><p>Go ahead and sign up if you haven’t already</p></aside>
+</section>
+
+<section id="" class="slide" data-background="images/yellow.png" data-background-repeat="repeat" data-background-size="auto" data-has-notes="true">
+<h2>Creating a <img src="images/new-repository.png" alt="" class="borderless line-height"></h2>
+<p><img src="images/make-a-repository.png" alt="" class="shorter"></p>
+<p class="fragment"><i class="material-icons atleft">live_help</i> <em>&quot;What if I don’t want it to be public?&quot;</em></p><aside class="notes"><p>Look into bitbucket, or get a private github plan, if you don’t want it to be public (but you should!)</p></aside>
+</section>
+
+<section id="" class="slide" data-background="images/yellow.png" data-background-repeat="repeat" data-background-size="auto" data-has-notes="true">
+<h2>Tell <img src="images/git-logo.png" alt="" class="borderless line-height"> about the <img src="images/new-repository.png" alt="" class="borderless line-height"> on <img src="images/github-logo.png" alt="" class="borderless line-height"></h2>
+<p><img src="images/push-from-command-line.png" alt=""></p>
+<p><code>git remote add origin https://github.com/username/reponame.git</code></p>
+<p>Check it with <code>git remote -v</code></p>
+<p class="fragment"><i class="material-icons atleft">live_help</i> <em>&quot;What’s ‘origin’?&quot;</em></p><aside class="notes"><p>Your local repository doesn’t know about the one on github yet. Adding a reference to the remote repository is easy, and will let you push and pull changes to keep your Github copy in sync.</p></aside>
+</section>
+
+<section id="" class="slide" data-background="images/yellow.png" data-background-repeat="repeat" data-background-size="auto" data-has-notes="true">
+<h2>Send your changes</h2>
+<p><img src="images/push-from-command-line.png" alt=""></p>
+<ol>
+<li>first time: <code>git push -u origin master</code></li>
+<li>subsequently: <code>git push</code></li>
+</ol>
+<pre><code>$ git push -u origin <span class="hljs-keyword">master</span>
+<span class="hljs-title">Counting</span> objects: <span class="hljs-number">3</span>, done.
+Delta compression using up to <span class="hljs-number">8</span> threads.
+Compressing objects: <span class="hljs-number">100</span>% (<span class="hljs-number">2</span>/<span class="hljs-number">2</span>), done.
+Writing objects: <span class="hljs-number">100</span>% (<span class="hljs-number">3</span>/<span class="hljs-number">3</span>), <span class="hljs-number">392</span> bytes | <span class="hljs-number">0</span> bytes/s, done.
+Total <span class="hljs-number">3</span> (delta <span class="hljs-number">0</span>), reused <span class="hljs-number">0</span> (delta <span class="hljs-number">0</span>)
+To https://github.com/swt30/git-good.git
+ * [new branch]      <span class="hljs-keyword">master</span> <span class="hljs-title">-&gt; master</span>
+Branch <span class="hljs-keyword">master</span> <span class="hljs-title">set</span> up to track remote branch <span class="hljs-keyword">master</span> <span class="hljs-title">from</span> origin.
+</code></pre>
+<ol start="3">
+<li><i class="material-icons atleft">computer</i> Do this and take a look at your shiny new github repository!</li>
+</ol><aside class="notes"><p>This is called “pushing”. When you push, you send your latest commits to the remote repository.</p></aside>
+</section>
+
+<section id="" class="slide" data-background="images/yellow.png" data-background-repeat="repeat" data-background-size="auto" data-has-notes="true">
+<h2>Get a copy of something</h2>
+<p><code>git clone https://github.com/username/repo.git</code></p>
+<ol>
+<li><i class="material-icons atleft">computer</i> Delete your local repository and then clone a fresh copy.</li>
+<li><i class="material-icons atleft">computer</i> Download, or fork and download my repository: <a href="https://github.com/swt30/git-good.git">https://github.com/swt30/git-good.git</a></li>
+</ol>
+<p><img src="images/watch-star-fork.png" alt=""></p><aside class="notes"><p>This is called cloning. Cloning gives you an exact duplicate of the repository, including its entire history.</p>
+<p>You can do this with:</p>
+<ul>
+<li>a repository that someone else has made that you want a copy of</li>
+<li>your own repository when you want to work on it from another machine</li>
+<li>a fork of someone else’s repository when you want to be able to modify it and submit your changes</li>
+</ul></aside>
+</section>
+
+<section id="" class="slide" data-background="images/yellow.png" data-background-repeat="repeat" data-background-size="auto" data-has-notes="true">
+<h2>Update a local copy</h2>
+<p><code>git pull</code></p>
+<ol>
+<li><i class="material-icons atleft">computer</i> I’m going to make a change to the repository you just cloned. Once I do, use <code>git pull</code> to get it.</li>
+</ol><aside class="notes"><p>This “pulls” in changes from elsewhere. For this example, I’m going to <em>push</em> some changes from my machine to the repository you just cloned from github. Then you are going to <em>pull</em> in the changes.</p>
+<p>This is as long as I designed the course to be. Do we have extra time? If so, we can go into branches, merging and pull requests, although there are no slides for this. If not, straight onto questions.</p></aside>
+</section>
+
+<section id="" class="slide" data-background="images/green.png" data-background-repeat="repeat" data-background-size="auto" data-has-notes="true">
+<h2>Question time!</h2>
+<p>Common questions:</p>
+<ol>
+<li><i class="material-icons atleft">live_help</i> <em>“What about committing things that aren’t text files?”</em></li>
+<li><i class="material-icons atleft">live_help</i> <em>“How does git handle multiple people working at the same time?”</em></li>
+<li><i class="material-icons atleft">live_help</i> <em>“What do I do about files I don’t want to commit?”</em></li>
+<li><i class="material-icons atleft">live_help</i> <em>“Why are git’s commands so inscrutable?”</em></li>
+<li><i class="material-icons atleft">live_help</i> <em>“I am so scared of breaking everything; can you please reassure me?”</em></li>
+</ol><aside class="notes"><ol>
+<li>Not text files: binary files don’t have diffs but can be checked in. However, you really shouldn’t use git for large data files that will churn frequently (or frequently-changed PDF outputs, or…). There are other ways to deal with these. Git should be for <em>source</em> files.</li>
+<li>Branching, merging, and pull requests.</li>
+<li>They can stay in the folder. If you add them to a .gitignore file, they won’t show up in <code>git status</code> and git will pretend they don’t exist. This is useful for temporary files, outputs, intermediates…</li>
+<li>The world is a cruel place. Cheat sheets are your friend. (Hack idea?)</li>
+<li>It is very difficult to break everything! If you committed it at some stage, chances are you can recover it.</li>
+</ol></aside>
+</section>
+
+<section id="" class="slide" data-background="images/green.png" data-background-repeat="repeat" data-background-size="auto" data-has-notes="true">
+<h2>Question time!</h2>
+<p><img src="images/xkcd.png" alt=""></p>
+<p><a href="http://xkcd.com/1597">xkcd.com/1597</a></p><aside class="notes"><p>Any other questions</p></aside>
+</section>
+
+<section id="" class="slide" data-background="images/green.png" data-background-repeat="repeat" data-background-size="auto" data-has-notes="true">
+<h1 class="notitle big">the end.</h1>
+<h3 class="notitle altfont">go forth and git good</h3><aside class="notes"><p>Thanks pardners</p></aside>
+</section></div>
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+
+    <script>
+    
+    
+    Reveal.initialize({
+      controls: true,
+      progress: true,
+      history: true,
+      center: true,
+
+      transition: Reveal.getQueryHash().transition || 'slide', 
+
+      
+      dependencies: [
+        
+        
+        
+        { src: 'plugin/zoom-js/zoom.js', async: true },
+        { src: 'plugin/notes/notes.js', async: true }
+      ]
+    });
+    </script>
+
+    <script src="js/dynamic-theme.js"></script><script src="js/such-notes-print.js"></script><script src="js/custom.js"></script><script src="plugin/math/math.js"></script>
+
+  </body>
+</html>
